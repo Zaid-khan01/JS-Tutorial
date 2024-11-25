@@ -35,3 +35,36 @@ let object = {  // contains elements in the curly brackets
 const myFunction = function(){
     console.log("Hello Zaid")
 }
+
+
+
+// ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// Stack (Primitive), Heap (Non-Primitive)
+
+
+// Stack
+let myName = "Rahul"
+
+let anotherName = myName
+anotherName = "Aman"
+
+console.log(myName);  // Here we think that our name is changed in 'myName' variable, but it's not
+console.log(anotherName); // Name is only changed in 'anotherName' variable
+
+// It means, in stack the actual data is not passed in other variable, only copy is passed, hence the actual data doesn't changes if we change in copy
+
+
+// Heap
+let userOne = {
+    email: "user@google.com",
+    upi: "user@ybl"
+}
+
+let userTwo = userOne
+userTwo.email = "zaid@google.com"
+
+console.log(userOne);  
+console.log(userTwo);
+
+// As we see in heap, actual data is passed on another variable hence if we change in another variable then actual data will also change
